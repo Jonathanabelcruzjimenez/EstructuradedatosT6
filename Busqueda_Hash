@@ -1,0 +1,22 @@
+    """
+    Realiza una búsqueda hash en un diccionario para encontrar el valor asociado con la clave.
+
+    Parámetros:
+    - diccionario: El diccionario en el que se realizará la búsqueda hash.
+    - clave: La clave que se está buscando.
+
+    Devuelve:
+    - El valor asociado con la clave si se encuentra, o None si no está presente.
+    """
+    return diccionario.get(clave, None)
+
+# Ejemplo de uso
+mi_diccionario = {'clave1': 'valor1', 'clave2': 'valor2', 'clave3': 'valor3'}
+clave_a_buscar = 'clave2'
+
+resultado = busqueda_hash(mi_diccionario, clave_a_buscar)
+
+if resultado is not None:
+    print(f"El valor asociado con la clave {clave_a_buscar} es {resultado}.")
+else:
+    print(f"La clave {clave_a_buscar} no se encuentra en el diccionario.")
