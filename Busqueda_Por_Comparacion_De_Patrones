@@ -1,0 +1,29 @@
+def busqueda_por_patron(lista, patron):
+    """
+    Realiza una búsqueda por comparación de patrones en la lista de cadenas.
+
+    Parámetros:
+    - lista: La lista de cadenas en la que se realizará la búsqueda.
+    - patron: El patrón que se está buscando.
+
+    Devuelve:
+    - La lista de cadenas que coinciden con el patrón.
+    """
+    coincidencias = []
+
+    for cadena in lista:
+        if patron in cadena:
+            coincidencias.append(cadena)
+
+    return coincidencias
+
+# Ejemplo de uso
+mi_lista = ["manzana", "banana", "pera", "melón", "mandarina"]
+patron_a_buscar = "an"
+
+resultados = busqueda_por_patron(mi_lista, patron_a_buscar)
+
+if resultados:
+    print(f"Coincidencias para el patrón '{patron_a_buscar}': {resultados}")
+else:
+    print(f"No se encontraron coincidencias para el patrón '{patron_a_buscar}'.")
